@@ -2,6 +2,7 @@ import { useEffect } from "react"
 
 import WorkoutDetails from '../components/WorkoutDetails'
 import WorkoutForm from "../components/WorkoutForm"
+import UpdateForm from "../components/UpdateForm"
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 
 const Home = () => {
@@ -29,6 +30,7 @@ const Home = () => {
             </div>
             <div className="workoutForm">
                 <WorkoutForm />
+                <UpdateForm />
             </div>
         </div>
     )

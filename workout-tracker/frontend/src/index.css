@@ -114,3 +114,7 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+.update-button {
+  margin-top: 70px;
+}
