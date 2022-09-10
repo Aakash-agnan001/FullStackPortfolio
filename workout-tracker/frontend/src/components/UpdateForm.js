@@ -1,7 +1,9 @@
 import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
 import { useState } from 'react'
+import { useAuthContext } from '../hooks/useAuthContext'
 
 const UpdateForm = () => {
+    const { user } = useAuthContext()
     const { dispatch } = useWorkoutsContext()
 
     const [id, setID] = useState('')
@@ -13,13 +15,20 @@ const UpdateForm = () => {
 
 
     const handleSubmit = async (e) => {
+        if (!user) {
+            return
+        }
+        e.preventDefault()
+
         const workout = { id, title, load, reps }
 
         const response = await fetch('/api/workouts/' + workout.id, {
             method: 'PATCH',
             body: JSON.stringify(workout),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.token}`
+
             }
         })
         const json = await response.json()
