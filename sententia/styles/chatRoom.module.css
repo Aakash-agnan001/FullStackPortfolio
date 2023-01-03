@@ -1,0 +1,14 @@
+.header {
+    color: #AC5C5C;
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    color: #AC5C5C;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #492424;
+    padding: 20px;
+    border-radius: 20px;
+}

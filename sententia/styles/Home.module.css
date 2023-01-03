@@ -1,0 +1,50 @@
+.home {
+  text-align: center;
+  background-color: #1E0101;
+}
+
+.welcome {
+  margin-top: 50px;
+  color: #492424;
+  font-size: 140px;
+  background-color: #1E0101;
+}
+
+.to {
+  margin-top: -100px;
+  color: #743E3E;
+  font-size: 140px;
+  background-color: #1E0101;
+}
+
+.sententia {
+  margin-top: -100px;
+  color: #AC5C5C;
+  font-size: 180px;
+  margin-bottom: 40px;
+  background-color: #1E0101;
+}
+
+.btn {
+  align-items: center;
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+
+.signIn {
+  color: #AC5C5C;
+  padding: 20px;
+  /* margin-left: 23%; */
+  font-size: 50px;
+  background-color: #492424;
+  border-radius: 20px;
+}
+
+.signUp {
+  color: #AC5C5C;
+  padding: 20px;
+  margin-right: 23%;
+  font-size: 50px;
+  background-color: #492424;
+  border-radius: 20px;
+}
