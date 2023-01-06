@@ -1,0 +1,32 @@
+.header {
+    color: #AC5C5C;
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    color: #AC5C5C;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #492424;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.dltBtn {
+    background-color: #492424;
+    color: #AC5C5C;
+    border-color: #492424;
+    margin-top: -10px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
