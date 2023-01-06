@@ -1,20 +1,15 @@
-import Link from 'next/link'
-import styles from '../styles/footer.module.css'
-import firebase from '../firebase/clientApp'
+import React, { useState } from 'react'
+import { getFirestore } from 'firebase/firestore'
 
-
-const Footer = () => {
-
+export default function addPost() {
+    const [cin, setCin] = useState('')
 
     return (
         <div className={styles.all}>
-            <form className={styles.form}>
-                <input className={styles.input} type="text" placeholder='Type your thoughts ...' />
-
-                <button className={styles.btn} onClick={() => firebase.auth.signOut()}>Submit</button>
+            <form>
+                <input className={styles.inp} type='text' value={post} id='post' onChange={e => setCin(e.target.value)} />
+                <button className={styles.btn} type='submit'>Add Post</button>
             </form>
         </div>
-    );
+    )
 }
-
-export default Footer;

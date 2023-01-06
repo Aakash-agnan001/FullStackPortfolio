@@ -12,3 +12,21 @@
     padding: 20px;
     border-radius: 20px;
 }
+
+.dltBtn {
+    background-color: #492424;
+    color: #AC5C5C;
+    border-color: #492424;
+    margin-top: -10px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

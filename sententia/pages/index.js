@@ -5,17 +5,18 @@ import Link from 'next/Link'
 import React from 'react'
 import firebase from '../firebase/clientApp'
 import { Routes, Route, useNavigate, BrowserRouter } from 'react-router-dom'
+import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 
 export default function Home() {
   // const navigate = useNavigate();
 
   const signInWithGoogle = async () => {
-    const auth = firebase.auth();
-    const provider = new firebase.auth.GoogleAuthProvider();
-    await auth.signInWithPopup(provider);
+    const auth = getAuth()
+    const provider = new GoogleAuthProvider();
+    await signInWithPopup(auth, provider);
 
-    firebase.auth().onAuthStateChanged(function (user) {
+    onAuthStateChanged(auth, function (user) {
       if (user) {
         location.href = "/chatRoom"
       }

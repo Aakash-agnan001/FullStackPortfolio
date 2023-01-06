@@ -3,6 +3,8 @@ import 'firebase/auth';
 import 'firebase/firestore';
 import { getFirestore as fgetFirestore } from "@firebase/firestore";
 import { getAuth } from "firebase/auth";
+import { getApps, initializeApp } from "firebase/app";
+
 
 
 const clientCredentials = {
@@ -14,8 +16,8 @@ const clientCredentials = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
     measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
-if (!firebase.apps.length) {
-    const app = firebase.initializeApp(clientCredentials);
+if (!getApps().length) {
+    const app = initializeApp(clientCredentials);
 }
 
 // module.exports = {
